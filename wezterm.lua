@@ -13,7 +13,16 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
--- config.color_scheme = 'Batman'
+config.audible_bell = "Disabled"
+config.keys = {
+	{
+		key = "Return",
+		mods = "CMD",
+		action = wezterm.action.ToggleFullScreen,
+	},
+}
+-- config.color_scheme = "Catppuccin Macchiato"
+config.color_scheme = "Colors (base16)"
 config.adjust_window_size_when_changing_font_size = false
 -- Set background to same color as neovim
 config.colors = {
@@ -33,15 +42,16 @@ config.colors = {
 	--   indexed     	= {[136]="#af8700"} , -- Arbitrary colors of the palette in the range from 16 to 255
 }
 
-config.window_background_opacity = 0.9 -- [1.0] alpha channel value with floating point numbers in the range 0.0 (meaning completely translucent/transparent) through to 1.0 (meaning completely opaque)
+config.window_background_opacity = 0.98 -- [1.0] alpha channel value with floating point numbers in the range 0.0 (meaning completely translucent/transparent) through to 1.0 (meaning completely opaque)
 config.colors.background = "#111111"
-config.font_size = 16
+config.font_size = 13
 config.font = wezterm.font_with_fallback({
 	"JetBrains Mono",
 })
 
 -- default is true, has more "native" look
 config.use_fancy_tab_bar = false
+config.window_decorations = "RESIZE"
 
 -- I don't like putting anything at the ege if I can help it.
 config.enable_scroll_bar = false
